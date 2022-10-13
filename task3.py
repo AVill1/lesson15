@@ -2,24 +2,12 @@
 # elemen0 1 1 2 3 5 8 13 21 34 55
 
 def fibonacci(index):
-    first=0
-    second=1
-
+    #base case
     if index<2:
         return index
-    for i in range (2,index+1):
-        third= first+second
-        first=second
-        second=third
 
-
-
-    return third
-
-
-
-
-
+    # recursive case
+    return fibonacci(index-1)+fibonacci(index-2)
 def main():
     index=int(input("Input index:"))
     element=fibonacci(index)
@@ -28,4 +16,3 @@ def main():
     print(msg)
 
 main()
-
